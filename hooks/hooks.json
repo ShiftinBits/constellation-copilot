@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "./hooks/scripts/session-start.sh",
+        "timeoutSec": 10,
+        "comment": "Inject Constellation code_intel preference at session start"
+      }
+    ],
+    "preToolUse": [
+      {
+        "type": "command",
+        "bash": "./hooks/scripts/pre-tool-use.sh",
+        "timeoutSec": 5,
+        "comment": "Nudge toward code_intel for structural queries"
+      }
+    ]
+  }
+}

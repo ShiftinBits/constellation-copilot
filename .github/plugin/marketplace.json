@@ -1,0 +1,22 @@
+{
+  "name": "constellation-plugins",
+  "owner": {
+    "name": "ShiftinBits Inc",
+    "email": "hello@shiftinbits.com"
+  },
+  "metadata": {
+    "description": "Constellation code intelligence plugins for GitHub Copilot",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "constellation",
+      "description": "A plugin that supercharges GitHub Copilot with Constellation, a privacy-first code intelligence platform.",
+      "source": "./",
+      "version": "1.0.0",
+      "license": "AGPL-3.0",
+      "repository": "https://github.com/ShiftinBits/constellation-copilot",
+      "category": "development"
+    }
+  ]
+}
