@@ -29,7 +29,7 @@ hooks/
 - **Skills**: Subdirectories in `skills/` with `SKILL.md` — same format as Claude Code skills
 - **Hooks**: `hooks/hooks.json` — `sessionStart` and `preToolUse` events run shell scripts
 - **MCP config**: `.mcp.json` — provides Constellation `code_intel` tool via stdio
-- **Tool references**: Copilot CLI uses `search` (not `Grep`), `read` (not `Read`), `edit` (not `Edit`) — agent tool lists must use Copilot CLI tool names
+- **Tool references**: Copilot CLI uses `grep` (not `Grep`), `view` (not `Read`), `edit` (not `Edit`), `glob` (not `Glob`) — agent tool lists must use Copilot CLI tool names
 - **Marketplace**: `.github/plugin/marketplace.json` — self-hosted marketplace for plugin distribution
 
 ## Common Tasks
@@ -49,10 +49,10 @@ Copilot CLI tools differ from Claude Code tools:
 
 | Claude Code | Copilot CLI | Notes |
 |-------------|-------------|-------|
-| `Grep` | `search` | Content search |
-| `Read` | `read` | File reading |
+| `Read` | `view` | File reading |
 | `Edit` | `edit` | File editing |
-| `Write` | `edit` | File creation/overwrite |
-| `Glob` | `search` | File pattern matching |
+| `Write` | `create` | New file creation |
+| `Grep` | `grep` (or `rg`) | Content search |
+| `Glob` | `glob` | File pattern matching |
 | `Bash` | `bash` | Shell commands |
 | `constellation/*` | `constellation/*` | MCP tools (same) |
