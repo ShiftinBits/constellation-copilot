@@ -63,10 +63,14 @@ Event hooks enable intelligent, transparent assistance:
 
 ### Quick Start
 
-**Install the plugin directly from GitHub:**
+**1. Add the Constellation marketplace:**
 ```bash
-# Install the plugin
-copilot plugin install ShiftinBits/constellation-copilot
+copilot plugin marketplace add ShiftinBits/constellation-copilot
+```
+
+**2. Install from the marketplace using `<plugin>@<marketplace>`:**
+```bash
+copilot plugin install constellation@constellation-plugins
 ```
 
 ### Uninstall
@@ -93,6 +97,24 @@ Example result:
 The Constellation code intelligence service is running and fully operational. To check indexing status and available capabilities, use api.getCapabilities().
 ```
 
+### Compatibility Smoke Test
+
+```bash
+# Register marketplace (once)
+copilot plugin marketplace add ShiftinBits/constellation-copilot
+
+# Install via <plugin>@<marketplace>
+copilot plugin install constellation@constellation-plugins
+
+# Confirm install/update/uninstall flow
+copilot plugin list
+copilot plugin update constellation
+copilot plugin uninstall constellation
+
+# Direct-install fallback
+copilot plugin install ShiftinBits/constellation-copilot
+```
+
 ## Troubleshooting
 
 ### Common Issues
@@ -102,7 +124,7 @@ The Constellation code intelligence service is running and fully operational. To
 | `AUTH_ERROR` | Check `CONSTELLATION_ACCESS_KEY` is set correctly, use `constellation auth` CLI command to set |
 | `PROJECT_NOT_INDEXED` | Run `constellation index --full` in your project |
 | Skills not activating | Restart the CLI/editor or reinstall the plugin |
-| Changes not taking effect | Plugin components are cached — uninstall and reinstall: `copilot plugin uninstall constellation && copilot plugin install ./path` |
+| Changes not taking effect | Plugin components are cached — reinstall from marketplace: `copilot plugin uninstall constellation && copilot plugin install constellation@constellation-plugins` (for local dev: `copilot plugin install ./path`) |
 
 ## Documentation
 

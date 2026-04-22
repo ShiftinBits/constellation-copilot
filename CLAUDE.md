@@ -39,9 +39,11 @@ hooks/
 | Add agent | Create `agents/{name}.agent.md` with frontmatter |
 | Add skill | Create `skills/{name}/SKILL.md` with frontmatter |
 | Add hook | Add event entry in `hooks/hooks.json`, script in `hooks/scripts/` |
-| Test locally | `copilot plugin install ./constellation-copilot` |
+| Add marketplace | `copilot plugin marketplace add ShiftinBits/constellation-copilot` |
+| Install from marketplace | `copilot plugin install constellation@constellation-plugins` |
+| Test locally (dev fallback) | `copilot plugin install ./constellation-copilot` |
 | Verify loaded | `copilot plugin list`, `/agent`, `/skills list` |
-| Reinstall after changes | `copilot plugin install ./constellation-copilot` (cached) |
+| Reinstall after local changes | `copilot plugin install ./constellation-copilot` (cached) |
 
 ## Agent Tool Mapping
 
