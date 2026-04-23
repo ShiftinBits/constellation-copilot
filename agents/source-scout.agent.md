@@ -90,7 +90,7 @@ Always check before you change:
 
 **Key Context to Preserve:**
 
-- `code_intel` is the PRIMARY tool for code understanding — grep is only for literal text
+- `code_intel` is the PRIMARY tool for code searching, navigating, and understanding — grep is only for literal text
 - Preserve any architectural insights, dependency relationships, or impact analysis results discovered via Constellation
 
 **Error Handling:**
