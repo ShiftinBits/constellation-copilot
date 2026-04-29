@@ -1,7 +1,7 @@
 {
   "name": "constellation",
-  "version": "1.0.0",
-  "description": "A plugin that supercharges GitHub Copilot with Constellation, a privacy-first code intelligence platform that allows Copilot to better understand your codebase and share knowledge across your team.",
+  "version": "1.1.0",
+  "description": "Upgrade Copilot from text search to code understanding.",
   "author": {
     "name": "ShiftinBits Inc",
     "email": "hello@shiftinbits.com"

@@ -5,15 +5,15 @@
     "email": "hello@shiftinbits.com"
   },
   "metadata": {
-    "description": "Constellation code intelligence plugins for GitHub Copilot",
-    "version": "1.0.0"
+    "description": "Supercharge Copilot with Constellation, a privacy-first code intelligence platform that allows Claude Code to better understand your codebase and share knowledge across your team.",
+    "version": "1.0.1"
   },
   "plugins": [
     {
       "name": "constellation",
-      "description": "A plugin that supercharges GitHub Copilot with Constellation, a privacy-first code intelligence platform.",
+      "description": "Upgrade Copilot from text search to code understanding.",
       "source": "./",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "license": "AGPL-3.0",
       "repository": "https://github.com/ShiftinBits/constellation-copilot",
       "category": "development"
