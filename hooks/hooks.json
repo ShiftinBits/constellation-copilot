@@ -4,17 +4,19 @@
     "sessionStart": [
       {
         "type": "command",
-        "bash": "./hooks/scripts/session-start.sh",
-        "timeoutSec": 10,
+        "bash": "node ./hooks/inject.js sessionStart",
+        "powershell": "node ./hooks/inject.js sessionStart",
+        "timeoutSec": 5,
         "comment": "Inject Constellation code_intel preference at session start"
       }
     ],
     "preToolUse": [
       {
         "type": "command",
-        "bash": "./hooks/scripts/pre-tool-use.sh",
+        "bash": "node ./hooks/bash.js",
+        "powershell": "node ./hooks/bash.js",
         "timeoutSec": 5,
-        "comment": "Nudge toward code_intel for structural queries"
+        "comment": "Nudge toward code_intel for search tools and Bash search commands"
       }
     ]
   }

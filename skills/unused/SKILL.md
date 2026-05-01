@@ -5,7 +5,7 @@ description: >
   Identifies exported symbols that are never imported anywhere in the codebase.
   Triggers for: "dead code", "unused exports", "orphaned code",
   "find unused functions", "clean up dead code"
-allowed-tools: ["constellation/code_intel"]
+allowed-tools: code_intel
 ---
 
 # Find Orphaned/Dead Code

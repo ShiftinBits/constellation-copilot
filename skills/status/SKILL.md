@@ -5,7 +5,7 @@ description: >
   or verifying the code intelligence service is running. Triggers for:
   "is Constellation connected", "check API status", "verify authentication",
   "constellation status", "is code_intel working"
-allowed-tools: ["constellation/code_intel"]
+allowed-tools: code_intel
 ---
 
 # Constellation Status Check

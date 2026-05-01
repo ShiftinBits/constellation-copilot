@@ -5,7 +5,7 @@ description: >
   API authentication, and project indexing status. Triggers for: "diagnose
   Constellation", "health check", "why isn't code_intel working",
   "Constellation not responding", "check indexing status"
-allowed-tools: ["constellation/code_intel"]
+allowed-tools: code_intel
 ---
 
 # Constellation Health Check

@@ -5,7 +5,7 @@ description: >
   structure, language distribution, or understanding how the codebase is
   organized. Triggers for: "architecture overview", "codebase structure",
   "project summary", "language distribution", "how is this organized"
-allowed-tools: ["constellation/code_intel"]
+allowed-tools: code_intel
 ---
 
 # Architecture Overview

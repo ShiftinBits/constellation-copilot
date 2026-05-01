@@ -7,8 +7,7 @@ While Constellation's MCP server provides raw code intelligence capabilities, th
 | Feature | Benefit |
 |---------|---------|
 | **Contextual Skills** | Copilot automatically loads relevant knowledge when needed |
-| **Proactive Agents** | Copilot suggests analysis before you make risky changes |
-| **Safety Hooks** | Reminders to check impact before modifying code |
+| **Safety Hooks** | Reminders to prefer `code_intel` for structural code questions |
 
 ## Features
 
@@ -20,28 +19,11 @@ Copilot automatically activates specialized analysis based on your questions:
 |-------|-------------------------------|
 | **status** | API connectivity, authentication, service health |
 | **diagnose** | Health checks, indexing status, connectivity issues |
-| **impact** | Impact of changes, blast radius, risk assessment |
+| **impact-analysis** | Impact of changes, blast radius, risk assessment |
 | **deps** | File dependencies, circular dependencies, module coupling |
 | **unused** | Dead code, orphaned exports, unused functions |
 | **architecture** | Codebase structure, language distribution, project overview |
 | **troubleshooting** | Error codes, debugging, connection problems |
-
-### Agents
-
-Specialized AI agents for autonomous analysis:
-
-| Agent | Purpose |
-|-------|---------|
-| **source-scout** | Explores and navigates codebase, discovers symbols and architectural patterns |
-| **impact-investigator** | Proactively assesses risk before refactoring, renaming, or deleting code |
-| **dependency-detective** | Detects circular dependencies and unhealthy coupling patterns |
-
-**Example Trigger:**
-```
-You: "Rename AuthService to AuthenticationService"
-Copilot: "Before renaming, let me analyze the potential impact..."
-[Launches impact-investigator agent]
-```
 
 ### Hooks
 
@@ -49,8 +31,10 @@ Event hooks enable intelligent, transparent assistance:
 
 | Hook | Event | Behavior |
 |------|-------|----------|
-| **Code Intel Preference** | `sessionStart` | Establishes code_intel as the primary tool for code understanding |
-| **Search Nudge** | `preToolUse` | Reminds to prefer code_intel over grep for structural queries |
+| **Code Intel Preference** (`inject.js`) | `sessionStart` | Establishes `code_intel` as the primary tool for code understanding |
+| **Search Nudge** (`bash.js`) | `preToolUse` | Nudges toward `code_intel` when invoking `grep`/`rg`/`glob`/`awk` directly or via `bash` |
+
+Both hooks no-op unless `CONSTELLATION_ACCESS_KEY` is set, and ship `bash` and `powershell` commands so they run on macOS, Linux, and Windows.
 
 ## Installation
 

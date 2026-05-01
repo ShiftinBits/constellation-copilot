@@ -6,7 +6,7 @@ description: >
   file use?) and reverse (what uses this file?) analysis. Triggers for:
   "dependencies of X", "what imports this", "circular dependencies",
   "what depends on X", "dependency graph"
-allowed-tools: ["constellation/code_intel"]
+allowed-tools: code_intel
 ---
 
 # Dependency Analysis
