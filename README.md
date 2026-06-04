@@ -71,14 +71,10 @@ Call the `status` command on the constellation plugin within Copilot:
 
 Example result:
 ```
-• Status: Connected /
-   - API Connection: Active
-   - Authentication: Valid
-   - Project Access: Confirmed
-   - Last Indexed: 2026-04-07 at 22:42:17 UTC
-   - Response Time: 569ms
+Status: Connected
+Authentication valid, project access confirmed.
 
-The Constellation code intelligence service is running and fully operational. To check indexing status and available capabilities, use api.getCapabilities().
+Note: Use /constellation:diagnose for indexing status and detailed health checks.
 ```
 
 ### Compatibility Smoke Test
