@@ -26,7 +26,7 @@ Call `code_intel` with this code parameter:
 ```javascript
 const [deps, circles] = await Promise.all([
   api.getDependencies({ filePath: "<file-path>", depth: 2, includePackages: true }),
-  api.findCircularDependencies({ filePath: "<file-path>", maxDepth: 5 })
+  api.findCircularDependencies({ filePath: "<file-path>" })
 ]);
 return { dependencies: deps, circularDependencies: circles };
 ```
