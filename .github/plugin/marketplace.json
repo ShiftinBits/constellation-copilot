@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Supercharge Copilot with Constellation, a privacy-first code intelligence platform that allows Claude Code to better understand your codebase and share knowledge across your team.",
-    "version": "1.1.0"
+    "version": "1.1.1"
   },
   "plugins": [
     {
       "name": "constellation",
       "description": "Upgrade Copilot from text search to code understanding.",
       "source": "./",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "license": "AGPL-3.0",
       "repository": "https://github.com/ShiftinBits/constellation-copilot",
       "category": "development"
