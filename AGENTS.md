@@ -40,3 +40,7 @@ hooks/
 | Test locally (dev fallback) | `copilot plugin install ./constellation-copilot` |
 | Verify loaded | `copilot plugin list`, `/skills list` |
 | Reinstall after local changes | `copilot plugin install ./constellation-copilot` (cached) |
+
+## Worktrees
+
+Create git worktrees only under this repo's `.claude/worktrees/<branch-slug>` (already gitignored), e.g. `git worktree add .claude/worktrees/feat-x -b feat/x origin/main`. Never create them outside the repo (e.g. sibling `../constellation-<name>-<branch>` folders) or in a `.worktrees/` directory.
